@@ -13,16 +13,6 @@
   }],
   "repository": "https://github.com/stkeditz/AAROHIxCHATBOTv2",
   "env": {
-    "API_ID": {
-      "description": "Get this value from my.telegram.org/apps.",
-      "required": true,
-      "value": ""
-    },
-    "API_HASH": {
-      "description": "Get this value from my.telegram.org/apps.",
-      "required": true,
-      "value": ""
-    },
     "BOT_TOKEN": {
       "description": "A Bot token from @BotFather",
       "required": true,
@@ -32,11 +22,6 @@
       "description": "Get a mongodb url from https://cloud.mongodb.com.",
       "required": true,
       "value": ""
-    },
-    "OWNER_ID": {
-      "description": "User id of the user who will known as owner of the bot.",
-      "required": true,
-      "value": "5465943450"
     }
   }
 }
