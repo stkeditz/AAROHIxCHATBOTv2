@@ -23,7 +23,7 @@ async def chaton_(_, m: Message):
 
 
 @AarohiX.on_message(
-    (filters.text | filters.sticker | filters.group) & ~filters.private & ~filters.bot, group=4
+    (filters.text | filters.sticker | filters.group) & filters.private & ~filters.bot, group=4
 )
 async def chatbot_text(client: Client, message: Message):
     try:
@@ -112,7 +112,7 @@ async def chatbot_text(client: Client, message: Message):
 
 
 @AarohiX.on_message(
-    (filters.sticker | filters.group | filters.text) & ~filters.private & ~filters.bot, group=4
+    (filters.sticker | filters.group | filters.text) & filters.private & ~filters.bot, group=4
 )
 async def chatbot_sticker(client: Client, message: Message):
     try:
@@ -203,7 +203,7 @@ async def chatbot_sticker(client: Client, message: Message):
 
 
 @AarohiX.on_message(
-    (filters.text | filters.sticker | filters.group) & ~filters.private & ~filters.bot, group=4
+    (filters.text | filters.sticker | filters.group) & filters.private & ~filters.bot, group=4
 )
 async def chatbot_pvt(client: Client, message: Message):
     try:
@@ -250,7 +250,7 @@ async def chatbot_pvt(client: Client, message: Message):
 
 @AarohiX.on_message(
     (filters.sticker | filters.sticker | filters.group)
-    & ~filters.private
+    & filters.private
     & ~filters.bot,
     group=4,
 )
