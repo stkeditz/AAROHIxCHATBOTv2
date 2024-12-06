@@ -87,9 +87,12 @@ async def start(_, m: Message):
         )
 
         pipe = "▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰"
+        prev_content = ""
         for i in range(len(pipe)):
             animation_frame = pipe[:i+1] + '▱' * (len(pipe) - i - 1)
-            await accha.edit(f"__{animation_frame}__")
+            if animation_frame != prev_content:  # Only edit if the content changes
+                await accha.edit(f"__{animation_frame}__")
+                prev_content = animation_frame
             await asyncio.sleep(0.2)
 
         await accha.delete()
