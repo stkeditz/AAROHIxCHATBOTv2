@@ -85,21 +85,21 @@ async def start(_, m: Message):
         accha = await m.reply_text(
             text=random.choice(EMOJIOS),
         )
-     #   await accha.react(random.choice(EMOJIOS))
+        await accha.delete()
         umm = await m.reply_sticker(sticker=random.choice(STICKER))
         await asyncio.sleep(2)
         await umm.delete()
         await m.reply_photo(
             photo=random.choice(IMG),
             caption=f"""**🌟 ɪɴɴᴏᴠᴀᴛɪᴠᴇ ᴀɪ ᴅᴇᴠᴇʟᴏᴘᴇʀ 🌟**
-✨ **ᴇxᴘᴇʀɪᴇɴᴄᴇ ᴛʜᴇ ғᴜᴛᴜʀᴇ ᴏғ ᴄʜᴀᴛʙᴏᴛs ᴡɪᴛʜ {AarohiX.name}!** ✨
-🚀 **ᴇɴɧᴀɴᴄɪɴɢ ᴄᴏᴍᴍᴜɴɪᴄᴀᴛɪᴏɴs, ᴏɴʟɪɴᴇ, ᴡɪᴛʜ ɪɴᴛᴇʟʟɪɢᴇɴᴄᴇ!** 🚀
-🌐 **ᴀɴ ᴀɪ-ᴇɴᴀʙʟᴇᴅ ᴄᴏᴍᴘᴀɴɪᴏɴ, ᴇᴠᴏʟᴠɪɴɢ ᴀs ᴛɪᴍᴇ ɢᴏᴇs ᴏɴ!** 🌐
-🔧 **ᴡᴏʀᴋɪɴɢ ᴄᴏɴsᴛᴀɴᴛʟʏ ᴛᴏ ᴇɴʜᴀɴᴄᴇ ʏᴏᴜʀ ᴇxᴘᴇʀɪᴇɴᴄᴇ.** 🔧
+            
+**ᴇxᴘᴇʀɪᴇɴᴄᴇ ᴛʜᴇ ғᴜᴛᴜʀᴇ ᴏғ ᴄʜᴀᴛʙᴏᴛs ᴡɪᴛʜ [{AarohiX.name}](t.me/{AarohiX.username})!**
+**ᴇɴɧᴀɴᴄɪɴɢ ᴄᴏᴍᴍᴜɴɪᴄᴀᴛɪᴏɴs, ᴏɴʟɪɴᴇ, ᴡɪᴛʜ ɪɴᴛᴇʟʟɪɢᴇɴᴄᴇ!** 🚀
+**ᴡᴏʀᴋɪɴɢ ᴄᴏɴsᴛᴀɴᴛʟʏ ᴛᴏ ᴇɴʜᴀɴᴄᴇ ʏᴏᴜʀ ᴇxᴘᴇʀɪᴇɴᴄᴇ.** 🔧
 ━━━━━━━━━━━━━━
 <b>||💬 ʜɪᴛ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ғᴏʀ ʜᴇʟᴘ!||</b>
 
-<b><blockquote>🧑‍💻 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://t.me/dil_sagar_121'>ᴅɪʟ❣️</a></blockquote></b>""",
+<b>🧑‍💻 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://t.me/dil_sagar_121'>ᴅɪʟ❣️</a></b>""",
             reply_markup=InlineKeyboardMarkup(DEV_OP),
         )
         await add_served_user(m.from_user.id)
