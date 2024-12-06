@@ -1,13 +1,8 @@
-
-
 import asyncio
 import random
-
 from pyrogram import filters
 from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardMarkup, Message
-
-
 from AarohiX import AarohiX
 from AarohiX.database.chats import add_served_chat
 from AarohiX.database.users import add_served_user
@@ -85,6 +80,13 @@ async def start(_, m: Message):
         accha = await m.reply_text(
             text=random.choice(EMOJIOS),
         )
+        await asyncio.sleep(1.3)
+        await accha.edit("Ꭻᴀʏ")
+        await asyncio.sleep(0.2)
+        await accha.edit("ᎫᴀʏㅤᏚʜʀᴇᴇ")
+        await asyncio.sleep(0.2)
+        await accha.edit("🙏|| ᎫᴀʏㅤᏚʜʀᴇᴇㅤᏒᴀᴍ ||🙏")
+        await asyncio.sleep(0.2)
         await accha.delete()
         umm = await m.reply_sticker(sticker=random.choice(STICKER))
         await asyncio.sleep(2)
@@ -93,9 +95,12 @@ async def start(_, m: Message):
             photo=random.choice(IMG),
             caption=f"""**🌟 ɪɴɴᴏᴠᴀᴛɪᴠᴇ ᴀɪ ᴅᴇᴠᴇʟᴏᴘᴇʀ 🌟**
             
-**ᴇxᴘᴇʀɪᴇɴᴄᴇ ᴛʜᴇ ғᴜᴛᴜʀᴇ ᴏғ ᴄʜᴀᴛʙᴏᴛs ᴡɪᴛʜ [{AarohiX.name}](t.me/{AarohiX.username})!**
-**ᴇɴɧᴀɴᴄɪɴɢ ᴄᴏᴍᴍᴜɴɪᴄᴀᴛɪᴏɴs, ᴏɴʟɪɴᴇ, ᴡɪᴛʜ ɪɴᴛᴇʟʟɪɢᴇɴᴄᴇ!** 🚀
-**ᴡᴏʀᴋɪɴɢ ᴄᴏɴsᴛᴀɴᴛʟʏ ᴛᴏ ᴇɴʜᴀɴᴄᴇ ʏᴏᴜʀ ᴇxᴘᴇʀɪᴇɴᴄᴇ.** 🔧
+**ᴇxᴘᴇʀɪᴇɴᴄᴇ ᴛʜᴇ ғᴜᴛᴜʀᴇ ᴏғ ᴄʜᴀᴛʙᴏᴛs ᴡɪᴛʜ
+
+[{AarohiX.name}](t.me/{AarohiX.username})!**
+
+**ᴇɴɧᴀɴᴄɪɴɢ ᴄᴏᴍᴍᴜɴɪᴄᴀᴛɪᴏɴs, ᴏɴʟɪɴᴇ, ᴡɪᴛʜ ɪɴᴛᴇʟʟɪɢᴇɴᴄᴇ!**
+**ᴡᴏʀᴋɪɴɢ ᴄᴏɴsᴛᴀɴᴛʟʏ ᴛᴏ ᴇɴʜᴀɴᴄᴇ ʏᴏᴜʀ ᴇxᴘᴇʀɪᴇɴᴄᴇ.**
 ━━━━━━━━━━━━━━
 <b>||💬 ʜɪᴛ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ғᴏʀ ʜᴇʟᴘ!||</b>
 
