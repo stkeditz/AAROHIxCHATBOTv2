@@ -1,13 +1,8 @@
-
-
 import asyncio
 import random
-
 from pyrogram import filters
 from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardMarkup, Message
-
-
 from AarohiX import AarohiX
 from AarohiX.database.chats import add_served_chat
 from AarohiX.database.users import add_served_user
@@ -87,13 +82,29 @@ async def start(_, m: Message):
         )
 
         pipe = "▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰"
-        prev_content = ""
-        for i in range(len(pipe)):
-            animation_frame = pipe[:i+1] + '▱' * (len(pipe) - i - 1)
-            if animation_frame != prev_content:  # Only edit if the content changes
-                await accha.edit(f"__{animation_frame}__")
-                prev_content = animation_frame
-            await asyncio.sleep(0.2)
+        
+        
+        await asyncio.sleep(1.3)
+        await accha.edit(f"__{pipe[:2]}▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱__")
+        await asyncio.sleep(0.2)
+        
+        await accha.edit(f"__{pipe[:4]}▱▱▱▱▱▱▱▱▱▱▱▱__")
+        await asyncio.sleep(0.2)
+        
+        await accha.edit(f"__{pipe[:6]}▱▱▱▱▱▱▱▱▱▱__")
+        await asyncio.sleep(0.2)
+        
+        await accha.edit(f"__{pipe[:8]}▱▱▱▱▱▱▱▱__")
+        await asyncio.sleep(0.2)
+        
+        await accha.edit(f"__{pipe[:10]}▱▱▱▱▱▱__")
+        await asyncio.sleep(0.2)
+        
+        await accha.edit(f"__{pipe[:12]}▱▱▱▱__")
+        await asyncio.sleep(0.2)
+        
+        await accha.edit(f"__{pipe[:14]}▱__")
+        await asyncio.sleep(0.2)
 
         await accha.delete()
 
@@ -103,7 +114,15 @@ async def start(_, m: Message):
 
         await m.reply_photo(
             photo=random.choice(IMG),
-            caption=f"""**๏ ʜᴇʏ, ɪ ᴀᴍ {AarohiX.name}**\n**➻ ᴀɴ ᴀɪ ʙᴀsᴇᴅ ᴄʜᴀᴛʙᴏᴛ.**\n**──────────────**\n**➻ ᴜsᴀɢᴇ /chatbot [ᴏɴ/ᴏғғ]**\n<b>||๏ ʜɪᴛ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ғᴏʀ ʜᴇʟᴘ||</b>""",
+            caption=f"""**🌟 ɪɴɴᴏᴠᴀᴛɪᴠᴇ ᴀɪ ᴅᴇᴠᴇʟᴏᴘᴇʀ 🌟**
+            \n✨ **ᴇxᴘᴇʀɪᴇɴᴄᴇ ᴛʜᴇ ғᴜᴛᴜʀᴇ ᴏғ ᴄʜᴀᴛʙᴏᴛs ᴡɪᴛʜ {AarohiX.name}!** ✨
+            \n🚀 **ᴇɴɧᴀɴᴄɪɴɢ ᴄᴏᴍᴍᴜɴɪᴄᴀᴛɪᴏɴs, ᴏɴʟɪɴᴇ, ᴡɪᴛʜ ɪɴᴛᴇʟʟɪɢᴇɴᴄᴇ!** 🚀
+            \n🌐 **ᴀɴ ᴀɪ-ᴇɴᴀʙʟᴇᴅ ᴄᴏᴍᴘᴀɴɪᴏɴ, ᴇᴠᴏʟᴠɪɴɢ ᴀs ᴛɪᴍᴇ ɢᴏᴇs ᴏɴ!** 🌐
+            \n🔧 **ᴡᴏʀᴋɪɴɢ ᴄᴏɴsᴛᴀɴᴛʟʏ ᴛᴏ ᴇɴʜᴀɴᴄᴇ ʏᴏᴜʀ ᴇxᴘᴇʀɪᴇɴᴄᴇ.** 🔧
+            \n━━━━━━━━━━━━━━
+            \n**➻ ᴜsᴀɢᴇ** /chatbot [ᴏɴ/ᴏғғ]
+            \n<b>||💬 ʜɪᴛ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ғᴏʀ ʜᴇʟᴘ!||</b>"""
+            + f"\n<b><blockquote>🧑‍💻 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://t.me/dil_sagar_121'>ᴅɪʟ❣️</a></blockquote></b>",
             reply_markup=InlineKeyboardMarkup(DEV_OP),
         )
         await add_served_user(m.from_user.id)
@@ -114,6 +133,7 @@ async def start(_, m: Message):
             reply_markup=InlineKeyboardMarkup(HELP_START),
         )
         await add_served_chat(m.chat.id)
+
 
 
 @AarohiX.on_cmd("help")
