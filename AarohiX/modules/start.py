@@ -85,17 +85,19 @@ async def start(_, m: Message):
         accha = await m.reply_text(
             text=random.choice(EMOJIOS),
         )
-        await asyncio.sleep(1.3)
-        await accha.edit("__ᴅιиg ᴅσиg ꨄ︎ ѕтαятιиg..__")
-        await asyncio.sleep(0.2)
-        await accha.edit("__ᴅιиg ᴅσиg ꨄ sтαятιиg.....__")
-        await asyncio.sleep(0.2)
-        await accha.edit("__ᴅιиg ᴅσиg ꨄ︎ sтαятιиg..__")
-        await asyncio.sleep(0.2)
+
+        pipe = "▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰"
+        for i in range(len(pipe)):
+            animation_frame = pipe[:i+1] + '▱' * (len(pipe) - i - 1)
+            await accha.edit(f"__{animation_frame}__")
+            await asyncio.sleep(0.2)
+
         await accha.delete()
+
         umm = await m.reply_sticker(sticker=random.choice(STICKER))
         await asyncio.sleep(2)
         await umm.delete()
+
         await m.reply_photo(
             photo=random.choice(IMG),
             caption=f"""**๏ ʜᴇʏ, ɪ ᴀᴍ {AarohiX.name}**\n**➻ ᴀɴ ᴀɪ ʙᴀsᴇᴅ ᴄʜᴀᴛʙᴏᴛ.**\n**──────────────**\n**➻ ᴜsᴀɢᴇ /chatbot [ᴏɴ/ᴏғғ]**\n<b>||๏ ʜɪᴛ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ғᴏʀ ʜᴇʟᴘ||</b>""",
